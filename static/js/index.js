@@ -1,5 +1,4 @@
 // LR Demo Logic
-// LR Demo Logic
 function initGeneratedLRVisualQuality() {
     const stepSlider = document.getElementById('glvq-slider');
     const sliderShell = document.getElementById('glvq-slider-shell');
@@ -106,8 +105,24 @@ function initGeneratedLRVisualQuality() {
         updateCompareUI(value);
     }
 
+    function updateStepFromPointer(event) {
+        const rect = stepSlider.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const min = Number(stepSlider.min);
+        const max = Number(stepSlider.max);
+        const ratio = clamp(x / rect.width, 0, 1);
+        const value = Math.round(min + ratio * (max - min));
+
+        stepSlider.value = value;
+        updateImages(value);
+    }
+
     stepSlider.addEventListener('input', function () {
         updateImages(Number(stepSlider.value));
+    });
+
+    stepSlider.addEventListener('pointermove', function (event) {
+        updateStepFromPointer(event);
     });
 
     labels.forEach(function (label) {
@@ -123,7 +138,7 @@ function initGeneratedLRVisualQuality() {
             state.currentSet = button.dataset.set;
             updateActiveSetButton(state.currentSet);
 
-            stepSlider.value = stepSlider.min;
+            stepSlider.value = stepSlider.max;
             updateImages(Number(stepSlider.value));
         });
     });

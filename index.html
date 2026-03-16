@@ -159,11 +159,10 @@
         <div class="container is-max-widescreen">
             <div class="columns is-centered">
                 <div class="column is-10">
-                    <p class="tldr-line">
+                    <p class="tldr-line has-text-centered">
                         <span class="tldr-label">✨TL;DR:</span>
-                        We present <b>DegFlow</b>, modeling real-world degradations as a continuous latent trajectory
-                        and learning a <b>scale-consistent</b> velocity field via <b>latent flow matching</b>,
-                        enabling realistic arbitrary-scale SR.
+                        We present a <b>continuous-scale realistic LR generation framework</b>
+                        <br>for improving <b>real-world super-resolution.</b> ✨
                     </p>
                 </div>
             </div>
@@ -202,7 +201,6 @@
     </section>
 
 <!-- Generated LR Visual Quality Section -->
-<!-- Generated LR Visual Quality Section -->
 <section class="section" id="generated-lr-visual-quality">
     <div class="container is-max-widescreen">
         <div class="columns is-centered">
@@ -239,7 +237,7 @@
                             <div class="glvq-slider-shell" id="glvq-slider-shell">
                                 <div class="glvq-slider-arrow-bar"></div>
                                 <input id="glvq-slider" class="glvq-slider" type="range" min="0" max="30" step="1"
-                                    value="0" aria-label="Generated LR step slider">
+                                    value="30" aria-label="Generated LR step slider">
                             </div>
 
                             <div class="glvq-slider-label-layer" id="glvq-slider-label-layer">
@@ -250,6 +248,10 @@
                             </div>
                         </div>
                     </div>
+
+                    <p class="glvq-instruction has-text-centered">
+                        Scroll to inspect continuous LR generation and compare it with bicubic using the slider.
+                    </p>
 
                     <!-- scene buttons -->
                     <div class="glvq-controls-row">
@@ -269,7 +271,7 @@
     <div class="container is-max-fullhd">
         <div class="columns is-centered">
             <div class="column is-11 has-text-centered">
-                <h2 class="title video-title">Generated LR Visaul Quality</h2>
+                <h2 class="title video-title">Generated LR Visual Results</h2>
 
                 <div class="trajectory-demo">
                     <!-- Row 1: Real -->
@@ -409,7 +411,7 @@
     <div class="container is-fluid">
         <div class="columns is-centered">
             <div class="column is-12">
-                <h2 class="title has-text-centered">Visual Quality</h2>
+                <h2 class="title has-text-centered">Unseen-Scale SR Results</h2>
 
                 <div class="vq-carousel-block">
                     <button class="vq-carousel-nav vq-carousel-nav-left"
@@ -457,7 +459,7 @@
     <div class="container is-fluid">
         <div class="columns is-centered">
             <div class="column is-12">
-                <h2 class="title has-text-centered">Comparison</h2>
+                <h2 class="title has-text-centered">SR Comparison</h2>
 
                 <div class="visual-quality-top-tabs" id="vq-top-tabs">
                     <button class="vq-top-tab is-active" data-mode="fixed" type="button">Fixed-Scale SR</button>
@@ -799,7 +801,7 @@
     <div class="container is-max-widescreen">
         <div class="columns is-centered">
             <div class="column is-11">
-                <h2 class="title has-text-centered">Framework</h2>
+                <h2 class="title has-text-centered">Framework Overview</h2>
 
                 <div class="main-figure-block">
                     <img src="./static/images/main_figure/main_figure.png" alt="Main Figure">
@@ -820,7 +822,7 @@
         <div class="columns is-centered">
             <div class="column is-11">
                 <h2 class="title has-text-centered">
-                    LPIPS-based Perceptual Supervision
+                    LPIPS-based Preceptual Supervision for Nonlinear Flow Matching
                 </h2>
 
                 <div class="lpips-supervision-block">
@@ -860,15 +862,15 @@
                 </a>
             </div>
 
-            <div class="columns is-centered">
-                <div class="column is-8">
-                    <div class="content">
-                        <p>
-                            The website template was borrowed from Gaussian Object.
-                        </p>
-                    </div>
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content has-text-centered">
+                    <p>
+                        The website template was borrowed from Gaussian Object.
+                    </p>
                 </div>
             </div>
+        </div>
 
             <div class="content has-text-centered" style="margin-top: 1.5rem;">
                 <p style="margin-bottom: 0.25rem; font-weight: 600;">
